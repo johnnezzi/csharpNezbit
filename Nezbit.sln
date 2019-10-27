@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nezbit", "Nezbit\Nezbit.csproj", "{776BD36D-1FD0-4AC3-AAD2-6B022D079993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{776BD36D-1FD0-4AC3-AAD2-6B022D079993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776BD36D-1FD0-4AC3-AAD2-6B022D079993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776BD36D-1FD0-4AC3-AAD2-6B022D079993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776BD36D-1FD0-4AC3-AAD2-6B022D079993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
