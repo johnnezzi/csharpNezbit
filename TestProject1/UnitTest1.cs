@@ -26,5 +26,5 @@ namespace TestProject1
             
             Assert.That(testGenesis.PrintOut(), Is.EqualTo("Block - Timestamp: 1234567890 Last Hash: ---------- Hash     : f1r57-ha5h Data     : blah blah blah"));
         }
-    }
+        
 }

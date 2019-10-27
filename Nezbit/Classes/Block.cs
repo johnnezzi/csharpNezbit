@@ -1,6 +1,8 @@
 using System;
+using System.Security.Cryptography;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 namespace Nezbit.Classes
 {
@@ -35,13 +37,30 @@ namespace Nezbit.Classes
             return new Block(1234567890, "------------------", "f1r57-ha5h", "blah blah blah");
         }
 
-        public static Block MineBlock(Block Lastblock, String Data)
+        public static Block MineBlock(Block lastblock, String data)
         {
             long timestamp = new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
-            string lastHash = Lastblock.Hash;
-            string Hash = "to-do hash";
+            string lastHash = lastblock.Hash;
+            string hash = Block.Hashdata(timestamp, lastHash, data);
 
+            return new Block(timestamp, lastHash, hash, data);
+            
         }
-    }
+
+        public static string Hashdata(long timestamp, string lastHash, string data)
+        {
+            string rawData = $"{timestamp}+{lastHash}+{data}";
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+                StringBuilder builder = new StringBuilder();  
+                for (int i = 0; i < bytes.Length; i++)  
+                {  
+                    builder.Append(bytes[i].ToString("x2"));  
+                }  
+                return builder.ToString(); 
+            }
+            
+        }
     
 }
