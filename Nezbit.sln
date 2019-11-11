@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nezbit", "Nezbit\Nezbit.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{199CD4A0-69E4-4C53-8AA5-A552369210C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B9BED06-8411-462E-A3F7-6B675D3DB3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{199CD4A0-69E4-4C53-8AA5-A552369210C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{199CD4A0-69E4-4C53-8AA5-A552369210C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{199CD4A0-69E4-4C53-8AA5-A552369210C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{199CD4A0-69E4-4C53-8AA5-A552369210C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

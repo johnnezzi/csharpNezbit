@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
@@ -31,25 +31,25 @@ namespace Nezbit.Classes
                    $"Data     : {Data}";
 
         }
-        
+
         public string PrintData(string data)
-        {    
+        {
             switch (data)
             {
-              case "Timestamp":
-                  return Timestamp.ToString();
-              case "LastHash":
-                  return LastHash;
-              case "Hash":
-                  return Hash;
-              case "Data":
-                  return Data;
-              default:
-                  return "No valid data requested";
+                case "Timestamp":
+                    return Timestamp.ToString();
+                case "LastHash":
+                    return LastHash;
+                case "Hash":
+                    return Hash;
+                case "Data":
+                    return Data;
+                default:
+                    return "No valid data requested";
             }
 
         }
-        
+
         public static Block Genesis()
         {
             return new Block(1234567890, "------------------", "f1r57-ha5h", "Genesis");
@@ -82,5 +82,9 @@ namespace Nezbit.Classes
 
         }
 
+        public static string BlockHash(Block block)
+        {
+            return Block.Hashdata(block.Timestamp, block.LastHash, block.Data);
+        }
     }
 }

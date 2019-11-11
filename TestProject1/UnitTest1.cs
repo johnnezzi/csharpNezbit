@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Nezbit.Classes;
 using NUnit.Framework;
+using NUnit.Framework.Constraints;
 
 namespace TestProject1
 {
@@ -55,6 +56,40 @@ namespace TestProject1
             bc.addBlock(data);
            
             Assert.That(bc.chain[^1].PrintData("Data"), Is.EqualTo("bar"));
+        }
+        
+        [Test]
+        public static void ValidatesAValidChain()
+        {
+            Blockchain bc = new Blockchain();
+            Blockchain bc2 = new Blockchain();
+            
+            bc2.addBlock("foo");
+            
+            Assert.That(bc.IsValidChain(bc2.chain), Is.True);
+            
+        }
+        
+        [Test]
+
+        public static void ReplacesBlockChainWithValidChain()
+        {   
+            Blockchain bc = new Blockchain();
+            Blockchain bc2 = new Blockchain();
+            bc2.addBlock("goo");
+            bc.ReplaceChain(bc2.chain);
+
+            Assert.That(bc.chain, Is.EquivalentTo(bc2.chain));
+        }
+        [Test]
+        public static void ReplacesBlockChainWithInValidChain()
+        {   
+            Blockchain bc = new Blockchain();
+            Blockchain bc2 = new Blockchain();
+            bc.addBlock("goo");
+            bc.ReplaceChain(bc2.chain);
+
+            Assert.That(bc.chain, Is.Not.EquivalentTo(bc2.chain));
         }
     }
         

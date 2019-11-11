@@ -12,10 +12,13 @@
     <e p="C:\Users\john.nezzi\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Nezbit.-1047908267.00" t="ExcludeRecursive" />
     <e p="C:\Users\john.nezzi\documents\Nezbit\csharpNezbit" t="IncludeFlat">
       <e p="Nezbit" t="IncludeRecursive">
+        <e p="App" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Classes" t="Include">
-          <e p="Block.cs" t="Include" />
-          <e p="Blockchain.cs" t="Include" />
+        <e p="BlockChain" t="Include">
+          <e p="Classes" t="Include">
+            <e p="Block.cs" t="Include" />
+            <e p="Blockchain.cs" t="Include" />
+          </e>
         </e>
         <e p="Nezbit.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -40,6 +43,27 @@
         </e>
         <e p="TestProject1.csproj" t="IncludeRecursive" />
         <e p="UnitTest1.cs" t="Include" />
+      </e>
+      <e p="WebApplication" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="Blockcontroller.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="WebApplication.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="WebApplication.csproj" t="IncludeRecursive" />
       </e>
     </e>
   </component>
