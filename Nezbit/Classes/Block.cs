@@ -32,15 +32,27 @@ namespace Nezbit.Classes
 
         }
         
-        public string PrintData()
-        {
-            return Data;
+        public string PrintData(string data)
+        {    
+            switch (data)
+            {
+              case "Timestamp":
+                  return Timestamp.ToString();
+              case "LastHash":
+                  return LastHash;
+              case "Hash":
+                  return Hash;
+              case "Data":
+                  return Data;
+              default:
+                  return "No valid data requested";
+            }
 
         }
         
         public static Block Genesis()
         {
-            return new Block(1234567890, "------------------", "f1r57-ha5h", "blah blah blah");
+            return new Block(1234567890, "------------------", "f1r57-ha5h", "Genesis");
         }
 
         public static Block MineBlock(Block lastblock, String data)
