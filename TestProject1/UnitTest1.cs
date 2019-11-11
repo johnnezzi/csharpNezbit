@@ -26,5 +26,19 @@ namespace TestProject1
             
             Assert.That(testGenesis.PrintOut(), Is.EqualTo("Block - Timestamp: 1234567890 Last Hash: ---------- Hash     : f1r57-ha5h Data     : blah blah blah"));
         }
+
+        [Test]
+
+        public void Test3()
+        {
+            string data = "foo";
+            Block lastBlock = Block.Genesis();
+            Block block = Block.MineBlock(lastBlock, data);
+
+            Assert.That(block.PrintData(), Is.EqualTo(data));
+            //sets the data to match the input
+        }
+        
+        }
         
 }
