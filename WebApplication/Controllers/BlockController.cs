@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Nezbit.Classes;
 
 namespace WebApplication.Controllers
@@ -11,8 +13,10 @@ namespace WebApplication.Controllers
         // GET
         [HttpGet]
         public String Index()
-        {
-            return "TestBlock";
+        {   
+            Blockchain bc = new Blockchain();
+            bc.addBlock("hello");
+            return JsonConvert.SerializeObject(bc.chain);
         }
     }
 }

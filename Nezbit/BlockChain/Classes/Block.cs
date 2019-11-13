@@ -3,14 +3,18 @@ using System.Security.Cryptography;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Nezbit.Classes
 {
     public class Block
-    {
+    {   [JsonProperty]
         private long Timestamp { get; set; }
+        [JsonProperty]
         private string LastHash { get; set; }
+        [JsonProperty]
         private string Hash { get; set; }
+        [JsonProperty]
         private string Data { get; set; }
 
         public Block(long timestamp, string lasthash, string hash, string data)

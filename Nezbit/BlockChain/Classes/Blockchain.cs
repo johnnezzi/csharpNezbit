@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
+ using Newtonsoft.Json;
 
-namespace Nezbit.Classes
+ namespace Nezbit.Classes
 {
     public class Blockchain
-    {
+    {    
+        [JsonProperty]
         public List<Block> chain;
 
         public Blockchain()
@@ -51,6 +53,6 @@ namespace Nezbit.Classes
             Console.WriteLine("Replacing BlockChain with current chain");
             this.chain = NewChain;
         }
-        
+
     }
 }
